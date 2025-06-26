@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/cit.gif" />
+        <link rel="icon" href={process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH + '/cit.gif' : '/cit.gif'} />
       </head>
       <NextAbstractWalletProvider>
         <body

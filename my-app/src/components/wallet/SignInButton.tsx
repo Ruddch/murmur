@@ -11,7 +11,7 @@ export function SignInButton() {
     return (
       <div className="flex items-center justify-center w-10 h-10">
         <div className="animate-spin">
-          <Image src="/abs.svg" alt="Loading" width={24} height={24} />
+          <Image src={(process.env.NEXT_PUBLIC_BASE_PATH || '') + '/abs.svg'} alt="Loading" width={24} height={24} />
         </div>
       </div>
     );
@@ -24,7 +24,7 @@ export function SignInButton() {
     >
       <Image
         className="dark:invert"
-        src="/abs.svg"
+        src={(process.env.NEXT_PUBLIC_BASE_PATH || '') + '/abs.svg'}
         alt="Abstract logomark"
         width={20}
         height={20}

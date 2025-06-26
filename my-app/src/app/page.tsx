@@ -14,7 +14,7 @@ export default function Home() {
       <main className="relative flex flex-col items-center justify-center z-10 text-white text-center">
         <div className="flex flex-col items-center gap-8 max-w-6xl mx-auto">
           <Image
-            src="/abstract.svg"
+            src={process.env.NEXT_PUBLIC_BASE_PATH ? process.env.NEXT_PUBLIC_BASE_PATH + '/abstract.svg' : '/abstract.svg'}
             alt="Abstract logo"
             width={240}
             height={32}

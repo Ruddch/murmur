@@ -35,7 +35,8 @@ export function AnimatedCat({ onClick, disabled = false, isSessionValid = false,
   };
 
   // Choose image based on state
-  const catImageSrc = showLoadingCat ? "/cit1.gif" : "/cit.gif";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const catImageSrc = showLoadingCat ? `${basePath}/cit1.gif` : `${basePath}/cit.gif`;
 
   return (
     <div className="flex justify-center">
